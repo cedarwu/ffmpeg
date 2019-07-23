@@ -16,7 +16,7 @@ WORKDIR     /tmp/workdir
 ARG        PKG_CONFIG_PATH=/opt/ffmpeg/lib/pkgconfig
 ARG        LD_LIBRARY_PATH=/opt/ffmpeg/lib
 ARG        PREFIX=/opt/ffmpeg
-ARG        MAKEFLAGS="-j2"
+ARG        MAKEFLAGS="-j8"
 
 ENV         FFMPEG_VERSION=4.1.4     \
             FDKAAC_VERSION=0.1.5      \
@@ -70,6 +70,7 @@ RUN     buildDeps="autoconf \
                    python \
                    openssl-dev \
                    tar \
+                   nasm \
                    yasm \
                    zlib-dev \
                    expat-dev" && \
