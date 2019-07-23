@@ -306,7 +306,7 @@ RUN \
 
 RUN \
 	DIR=/tmp/aom && \
-        git clone --branch ${AOM_VERSION} --depth 1 https://aomedia.googlesource.com/aom ${DIR} ; \
+        git clone --branch ${AOM_VERSION} --depth 1 https://github.com/cedarwu/aom.git ${DIR} ; \
         cd ${DIR} ; \
         rm -rf CMakeCache.txt CMakeFiles ; \
         mkdir -p ./aom_build ; \
